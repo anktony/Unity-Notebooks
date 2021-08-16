@@ -1,0 +1,56 @@
+#!markdown
+
+# Manipulação de Sprites Via Código
+
+#!csharp
+
+    void Update(){
+        transform.Translate(new Vector3(0.1f,0,0));
+        transform.Rotate(new Vector3(0,0,0.5f));
+        transform.localScale += new Vector3(0.1f, 0.1f, 0);
+    }
+
+#!markdown
+
+1. .Translate() --> Movimento de translação: se move na área ao redor (deve-se modificar os <strong>eixos x e y</strong>).<br/>   
+2. .Rotate() --> Movimento de rotação: se move ao redor o próprio eixo (deve-se modificar o <strong>eixo z</strong>).<br/>
+3. .localScale --> Expansão das dimensões, dando a impressão de aproximação (deve-se modificar os <strong>eixos x e y</strong>).<br/>    
+
+#!markdown
+
+# Criação de sprites simples sensíveis à luz
+### Habilitar luz em objetos 2d;
+
+ 1. criar um material (botão direito na aba project);  
+ 2. Fazer com que o material seja de um tipo que a luz seja aceita:   
+  +Na aba **shader** do material, na opção **sprites** mudar de **default** para **difuse**;  
+  +Selecionar a sprite, e arrastar o novo material criado para cima do material atual;  
+  +Checar posição da luz: o ideal é que a luz esteja à frente do material (**eixo z**);
+
+ 
+
+#!markdown
+
+# Layers
+ ### Criar layer para objeto 2d: 
+ 1. Selecionar objeto criado;
+ 2. Ir no painel layer;
+ 3. Clicar no dropdown e selecionar **Add Layer**;
+ 4. Nomear camadas: (obj1, obj2, obj3, etc.);
+ 5. No objeto da luz no dropdown **Culling Mask**, eu posso selecionar com quais layers ela irá ou não interagir;
+ 6. **Cópias do mesmo objeto pode estar usando layers diferentes**;
+
+#!markdown
+
+# Criação de Prefabs
+
+Criação de varias instâncias de um game object: balas, personagens.
+
+### Criar prefab - Forma 1:   
+1. Arrastar game object que será um prefab da aba **Hierarchy**para dentro da aba **Project**;
+2. **Ao clicar em *Apply* na seção *Prefab* todas as alterações feitas em um prefab serão transferidas para os outros, inclusive para o prefab em projects;**
+
+### Criar Prefab - Forma 2:
+1. Botão direito na aba *projects*: create > prefabs;
+2. Será criado um prefab vazio e sem nome.
+3. Para adicionar uma identidade, arrastar alguma sprite existente da aba **hierarchy** para o objeto vazio na aba **Project**.
