@@ -1,5 +1,6 @@
 #!markdown
 
+---------------------------------------------------------------------
 # Manipulação de Sprites Via Código
 
 #!csharp
@@ -54,3 +55,7 @@ Criação de varias instâncias de um game object: balas, personagens.
 1. Botão direito na aba *projects*: create > prefabs;
 2. Será criado um prefab vazio e sem nome.
 3. Para adicionar uma identidade, arrastar alguma sprite existente da aba **hierarchy** para o objeto vazio na aba **Project**.
+
+#!markdown
+
+----------------------------------------------------------------------
